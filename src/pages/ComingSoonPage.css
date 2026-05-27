@@ -1,0 +1,42 @@
+.cs {
+  min-height: 100vh;
+  background: var(--navy);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.cs__logo {
+  width: clamp(200px, 40vw, 340px);
+}
+
+.cs__heading {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.4rem, 4vw, 2.5rem);
+  letter-spacing: 0.25em;
+  color: var(--off-white);
+  margin: 0;
+  text-align: center;
+}
+
+.cs__spinner {
+  margin-top: 2rem;
+  width: 72px;
+  height: 72px;
+  border: 5px solid rgba(178, 221, 216, 0.2);
+  border-top-color: var(--coral);
+  border-radius: 50%;
+  animation: cs-spin 1.2s linear infinite;
+}
+
+@keyframes cs-spin {
+  0%   { transform: rotate(0deg);   border-top-color: var(--coral); }
+  25%  { transform: rotate(90deg);  border-top-color: var(--teal); }
+  50%  { transform: rotate(180deg); border-top-color: var(--mint); }
+  75%  { transform: rotate(270deg); border-top-color: var(--salmon); }
+  100% { transform: rotate(360deg); border-top-color: var(--coral); }
+}

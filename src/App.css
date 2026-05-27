@@ -1,0 +1,57 @@
+/* Brand-level utility shared across components */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.85rem 2rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.btn--primary {
+  background: var(--coral);
+  color: var(--white);
+  border-color: var(--coral);
+}
+
+.btn--primary:hover {
+  background: var(--dark-red);
+  border-color: var(--dark-red);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.btn--outline:hover {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.section-eyebrow {
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.text-coral {
+  color: var(--coral);
+}
