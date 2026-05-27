@@ -10,14 +10,19 @@ import ContactPage from './pages/ContactPage'
 import PortfolioPage from './pages/PortfolioPage'
 import ComingSoonPage from './pages/ComingSoonPage'
 
+const COMING_SOON = true
+
 function AppLayout() {
   const { pathname } = useLocation()
-  const isComingSoon = pathname === '/coming-soon'
+
+  if (COMING_SOON) {
+    return <ComingSoonPage />
+  }
 
   return (
     <>
       <ScrollToTop />
-      {!isComingSoon && <Nav />}
+      <Nav />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -25,11 +30,10 @@ function AppLayout() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/lets-talk" element={<ContactPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/coming-soon" element={<ComingSoonPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
-      {!isComingSoon && <Footer />}
+      <Footer />
     </>
   )
 }
