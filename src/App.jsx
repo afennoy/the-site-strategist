@@ -10,7 +10,7 @@ import ContactPage from './pages/ContactPage'
 import PortfolioPage from './pages/PortfolioPage'
 import ComingSoonPage from './pages/ComingSoonPage'
 
-const COMING_SOON = true
+const COMING_SOON = !import.meta.env.DEV
 
 function AppLayout() {
   const { pathname } = useLocation()
